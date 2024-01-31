@@ -17,9 +17,25 @@ The solutions of the Helmholtz equation in a cylindrical orthogonal coordinate s
 \end{align}
 ```
 where $q = \left({fk_{t}}/{2}\right)^2$, and $a$ is the major axis of the ellipse. Their solutions are the angular and radial Mathieu functions respectively.
+
+Non-diffracting beams can be written in the form:
+```math
+\begin{align}
+U(\mathbf{r}) = e^{-iKz}\text{GB}(\mathbf{r})W\left(\frac{x}{\mu},\frac{y}{\mu};k_{t}\right)
+\end{align}
+```
+where $\text{GB}$ is the fundamental Gaussian beam and $W$ describes the transverse distribution. For our case, $W$ corresponds to the Mathieu functions and so we can construct helical Mathieu-Gauss vector beams as:
+```math
+\begin{equation}
+    \textbf{HMGV}_{m_1, m_2} = \cos \theta \text{ HMG}^+_{m_1} \hat{e}_R + \sin \theta \text{ } e^{i \alpha}\text{ HMG}^-_{m_2} \hat{e}_L  
+\end{equation}
+```
+which are non-separable superpositions of the spatial and polarization degrees of freedom, weighted by $\theta$ and $\alpha$ respectively. Superscripts $+$ and $-$ denote polarization handedness.
+
+
 ## Computational Simulation
 The characteristic values and expansion coefficients of the desired Mathieu
 functions were calculated using [E. Cojocaru's MATLAB toolbox](https://www.mathworks.com/matlabcentral/fileexchange/22081-mathieu-functions-toolbox-v-1-0).
 
-Both angular and radial functions of the given parity are multiplied a Gaussian beam and normalized.
+Both angular and radial functions of the given parity are multiplied by a Gaussian beam and normalized.
 
