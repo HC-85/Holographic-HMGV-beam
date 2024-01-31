@@ -1,9 +1,17 @@
 # Holographic Helical Mathieu Gauss Vector Modes
 This was done as part of the final project for an undergraduate optics course. 
 
+<p align="center">
+  <img src="/images/hologram.PNG" />
+</p>
+
 Using _Experimental generation of Helical
 Mathieu-Gauss vector modes_ as main source, a computational simulation for the production of holograms was implemented, allowing for a new experimental
 generation of such modes.
+
+<p align="center">
+  <img src="/images/experimental_vs_simulation.PNG" />
+</p>
 
 For the full report, see: [Mathematical simulation and experimental generation of Helical
 Mathieu-Gauss vector modes](https://drive.google.com/file/d/1Vz3pPY1zT6H6XSvn4EKt_pxGjdzZ9dft/view).
@@ -39,3 +47,16 @@ functions were calculated using [E. Cojocaru's MATLAB toolbox](https://www.mathw
 
 Both angular and radial functions of the given parity are multiplied by a Gaussian beam and normalized.
 
+To create the binary hologram, we define $\theta _{xy}$ and $\theta _z$, which measure the deviation from the $z$-axis in terms of an azimuthal and polar angle respectively. This deviation is expressed with an exponential function having dependency on these angles that is multiplied with the helical Mathieu-Gauss beam of interest.
+The phase is encoded as follows:
+```math
+\begin{align}
+\varphi &= \tan ^{-1}\left(\frac{\Im V}{\Re V}\right)\\
+\phi &= \sin ^{-1}\left(\frac{|\varphi|}{\max |\varphi|}\right)\\
+T &= \frac{1}{2} + \frac{1}{2}\text{sgn}(\cos\varphi + \cos \phi)
+\end{align}
+```
+
+$T$ gives us the binary holograms, the negatives of which one has to print. 
+
+For experimental generation of the vector modes, both scalar Helical Mathieu-Gauss modes ($+$/ $-$) have to interfere.
