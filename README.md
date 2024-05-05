@@ -51,7 +51,7 @@ To create the binary hologram, we define $\theta _{xy}$ and $\theta _z$, which m
 The phase is encoded as follows:
 ```math
 \begin{align}
-\varphi &= \tan ^{-1}\left(\frac{\Im V}{\Re V}\right)\\
+\varphi &= \tan ^{-1}\left(\frac{\text{Im} V}{\text{Re} V}\right)\\
 \phi &= \sin ^{-1}\left(\frac{|\varphi|}{\max |\varphi|}\right)\\
 T &= \frac{1}{2} + \frac{1}{2}\text{sgn}(\cos\varphi + \cos \phi)
 \end{align}
